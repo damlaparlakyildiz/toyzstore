@@ -1,97 +1,100 @@
-# 🧸 ToyVault - Mattel Oyuncak Kataloğu & Yönetim Paneli
+# 🧸 ToyzStore - Modern E-Ticaret & Oyuncak Satış Mağazası
 
-Bu proje, **Web Geliştirme; Javascript Proje Yönergesi** kapsamında modern JavaScript kütüphanesi (ReactJS) ve Tailwind CSS kullanılarak geliştirilmiş tam kapsamlı bir CRUD (Ekle, Listele, Güncelle, Sil) ve LocalStorage tabanlı web uygulamasıdır.
+**ToyzStore**, modern web standartlarına uygun olarak **React 19**, **Tailwind CSS v4** ve **LocalStorage** kullanılarak geliştirilmiş, gerçek bir e-ticaret satış ve ürün yönetim platformudur.
 
-🔗 **Canlı Demo (Netlify):** [https://toyvault-demo.netlify.app](https://toyvault-demo.netlify.app) *(Kendi Netlify linkinizi buraya ekleyebilirsiniz)*  
+🔗 **Canlı Demo (Netlify):** [https://toyzstore-demo.netlify.app](https://toyzstore-demo.netlify.app) *(Kendi Netlify linkinizi buraya ekleyebilirsiniz)*  
 📁 **GitHub Deposu:** [https://github.com/kullanici-adiniz/toy-store-app](https://github.com/kullanici-adiniz/toy-store-app)
 
 ---
 
 ## 📸 Proje Ekran Görüntüleri
 
-![ToyVault Dashboard](./screenshots/dashboard.png)
+### 1. Mağaza Vitrini & Ürün Kataloğu
+![Mağaza Vitrini](./screenshots/anasayfa.png)
 
-> **Not:** Uygulamayı çalıştırdıktan sonra tarayıcınızdan aldığınız ekran görüntüsünü `screenshots/dashboard.png` olarak bu klasöre kaydedebilirsiniz.
+### 2. Ürünler
+![Ürünler](./screenshots/anasayfa2.png)
 
----
-
-## 🚀 Proje Özellikleri ve Yönerge Uyumluluğu
-
-| Yönerge Maddesi | Durum | Projedeki Karşılığı |
-| :--- | :---: | :--- |
-| **Modern JS Kütüphanesi** | ✅ | **React 19 & Vite** mimarisi kullanıldı. |
-| **Kalıcı Veri (LocalStorage)** | ✅ | Oyuncaklar tarayıcının `LocalStorage` belleğinde saklanır, sayfa yenilense de veriler kaybolmaz. İlk açılışta zengin örnek verilerle başlar. |
-| **Dosya Ağaç Yapısı** | ✅ | `Components/`, `Pages/`, `Interfaces/` klasörleri açıldı ve modüler yapı kuruldu. |
-| **Stil Kütüphanesi** | ✅ | **Tailwind CSS v4** ile responsive, modern ve mobil uyumlu bir arayüz geliştirildi. |
-| **Ekle (Create) İşlemi** | ✅ | "Yeni Oyuncak Ekle" butonu ile açılan modal formu üzerinden doğrulamalı (validation) ürün ekleme. |
-| **Listele (Read) İşlemi** | ✅ | Oyuncakların kartlar halinde dinamik listelenmesi, anlık arama (search), kategori filtreleme ve sıralama (fiyat, isim, stok). |
-| **Güncelle (Update) İşlemi** | ✅ | Her oyuncak kartındaki "Düzenle" butonu ile mevcut verilerin modalda açılarak güncellenmesi. |
-| **Sil (Delete) İşlemi** | ✅ | Her oyuncak kartındaki "Sil" butonu ile onay modalı (Confirmation Dialog) eşliğinde güvenli silme. |
-| **Netlify Uyumluluğu** | ✅ | `netlify.toml` ve `public/_redirects` dosyaları yapılandırıldı, tek komutla veya GitHub üzerinden canlıya alınabilir. |
+### 3. Alışveriş Sepeti Çekmecesi (Cart Drawer)
+![Alışveriş Sepeti](./screenshots/sepet.png)
 
 ---
 
-## 📂 Proje Dizin Yapısı
+## ✨ Öne Çıkan Özellikler
+
+* 🛒 **Gerçek E-Ticaret Deneyimi:**
+  * Ürün vitrini, indirimli ve eski fiyatlar, müşteri yıldız puanları, stok uyarıları.
+  * **Alışveriş Sepeti (Cart Drawer):** Sağdan açılan çekmece ile sepete ekleme, adet artırma/azaltma, 500 TL üzeri ücretsiz kargo hesaplayıcısı ve sipariş tamamlama akışı.
+* ⚡ **Tam Kapsamlı CRUD & Mağaza Yönetimi (Yönerge Şartları):**
+  * **Ekleme (Create):** Yetkili panelinde "Yeni Ürün Ekle" butonu ile resim önizlemeli, doğrulama kontrollü form.
+  * **Listeleme (Read):** Canlı arama kutusu, kategori butonları (Hot Wheels, Barbie, LEGO vb.) ve fiyata/stoğa göre akıllı sıralama.
+  * **Güncelleme (Update):** Her ürün kartından açılan düzenleme penceresi ile fiyat, stok, ad ve görsel güncelleme.
+  * **Silme (Delete):** Güvenli silme onay modalı ile listeden ve sepetten ürün çıkarma.
+* 🛡️ **Yönetici / Müşteri Modu Ayrımı:**
+  * Varsayılan olarak saf e-ticaret müşteri görünümü açıktır.
+  * Üst bardaki *"Yetkili Girişi"* düğmesiyle yöneticiler ürün ekleme/düzenleme/silme yetkilerini açıp kapatabilir.
+* 💾 **Kalıcı Bellek (LocalStorage):**
+  * Hem mağaza ürün kataloğu hem de müşteri sepeti tarayıcının `LocalStorage` alanında saklanır. Sayfa yenilense de veriler kaybolmaz.
+* 🎨 **Modern ve Mobil Uyumlu Tasarım:**
+  * Tailwind CSS v4 ile responsive (masaüstü, tablet, mobil) arayüz.
+
+---
+
+## 📂 Dosya & Mimari Yapısı
 
 ```text
 toy-store-app/
 ├── public/
-│   └── _redirects              # Netlify yönlendirme kuralı (SPA uyumluluğu)
+│   └── _redirects              # Netlify SPA yönlendirmesi
 ├── screenshots/
-│   └── dashboard.png           # Proje ekran görüntüsü
+│   ├── anasayfa.png            # Vitrin ekran görüntüsü
+│   ├── anasayfa2.png           # Yönetim ekran görüntüsü
+│   └── sepet.png               # Sepet ekran görüntüsü
 ├── src/
-│   ├── Components/             # Yeniden kullanılabilir arayüz bileşenleri
+│   ├── Components/             # Arayüz bileşenleri
+│   │   ├── CartDrawer.jsx      # Alışveriş sepeti çekmecesi
 │   │   ├── DeleteConfirmModal.jsx # Silme onay modalı
-│   │   ├── FilterBar.jsx       # Arama, kategori hapları ve sıralama barı
-│   │   ├── Navbar.jsx          # Üst navigasyon ve logo
-│   │   ├── StatCards.jsx       # İstatistik kartları (Stok, Çeşit, Değer vb.)
-│   │   ├── Toast.jsx           # Bildirim mesajları (Eklendi, Güncellendi vb.)
-│   │   ├── ToyCard.jsx         # Tekil oyuncak kartı (Düzenle & Sil butonlu)
-│   │   ├── ToyList.jsx         # Kart ızgarası ve boş durum (empty state)
-│   │   └── ToyModal.jsx        # Ekleme & Düzenleme form modalı
-│   ├── Interfaces/             # Veri modelleri ve tip tanımlamaları
-│   │   └── toy.interface.js    # Oyuncak veri yapısı, kategoriler ve başlangıç verileri
+│   │   ├── FilterBar.jsx       # Arama, filtreleme ve sıralama çubuğu
+│   │   ├── Navbar.jsx          # E-ticaret üst barı & sepet butonu
+│   │   ├── Toast.jsx           # Bildirim mesajları
+│   │   ├── ToyCard.jsx         # Ürün satış kartı
+│   │   ├── ToyList.jsx         # Ürün kataloğu ızgarası
+│   │   └── ToyModal.jsx        # Ürün ekleme & düzenleme formu
+│   ├── Interfaces/             # Veri modelleri ve başlangıç ürünleri
+│   │   └── toy.interface.js    # Ürün şeması ve yüksek kaliteli görseller
 │   ├── Pages/                  # Sayfa bileşenleri
-│   │   └── HomePage.jsx        # Ana sayfa (Tüm durumların ve CRUD fonksiyonlarının yönetildiği sayfa)
-│   ├── utils/                  # Yardımcı araçlar
-│   │   └── storage.js          # LocalStorage okuma/yazma/sıfırlama işlemleri
-│   ├── App.jsx                 # Kök React bileşeni
+│   │   └── HomePage.jsx        # Ana vitrin ve durum yönetimi
+│   ├── utils/                  # Yardımcı fonksiyonlar
+│   │   └── storage.js          # LocalStorage okuma / yazma
+│   ├── App.jsx
 │   ├── index.css               # Tailwind CSS tanımları
-│   └── main.jsx                # React giriş noktası
-├── index.html                  # HTML şablonu
-├── netlify.toml                # Netlify dağıtım ayarları
-├── package.json                # Bağımlılıklar ve npm betikleri
-└── vite.config.js              # Vite & Tailwind yapılandırması
+│   └── main.jsx
+├── netlify.toml                # Netlify dağıtım yapılandırması
+├── package.json
+└── vite.config.js
 ```
 
 ---
 
-## 🛠️ Yerel Geliştirme (Local Kurulum)
+## 🚀 Yerel Kurulum (Local Development)
 
-Projeyi bilgisayarınızda çalıştırmak için:
+```bash
+# 1. Bağımlılıkları yükleyin
+npm install
 
-1. **Bağımlılıkları Yükleyin:**
-   ```bash
-   npm install
-   ```
+# 2. Geliştirme sunucusunu başlatın
+npm run dev
 
-2. **Geliştirme Sunucusunu Başlatın:**
-   ```bash
-   npm run dev
-   ```
-   Tarayıcınızda `http://localhost:5173` adresini açarak uygulamayı test edebilirsiniz.
-
-3. **Üretim (Production) Derlemesi:**
-   ```bash
-   npm run build
-   ```
-   Derleme çıktıları `dist/` klasörüne oluşturulur.
+# 3. Üretim derlemesi
+npm run build
+```
+Tarayıcınızda `http://localhost:5173` adresine giderek alışveriş sitesini test edebilirsiniz.
 
 ---
 
 ## 🌐 Netlify Üzerinde Yayına Alma (Deploy)
 
-1. Projenizi GitHub'a yükleyin.
+1. Projenizi GitHub'a yükleyin (`git push`).
 2. [Netlify](https://www.netlify.com/)'a giriş yapın ve **"Add new site" > "Import an existing project"** seçeneğini seçin.
 3. GitHub deponuzu seçin.
 4. Derleme ayarlarını kontrol edin:
