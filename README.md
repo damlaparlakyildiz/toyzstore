@@ -2,10 +2,11 @@
 
 **ToyzStore**, modern web standartlarına uygun olarak **React 19**, **Tailwind CSS v4** ve **LocalStorage** kullanılarak geliştirilmiş, gerçek bir e-ticaret satış ve ürün yönetim platformudur.
 
-🔗 **Canlı Demo (Netlify):** [https://toyzstore-demo.netlify.app](https://toyzstore-demo.netlify.app) *(Kendi Netlify linkinizi buraya ekleyebilirsiniz)*  
-📁 **GitHub Deposu:** [https://github.com/kullanici-adiniz/toy-store-app](https://github.com/kullanici-adiniz/toy-store-app)
+ **Canlı Demo (Netlify):** 🔗 [https://rainbow-yeot-9c05d0.netlify.app/]
 
----
+
+
+ **GitHub Deposu:** [\[https://github.com/damlaparlakyildiz/toyzstore]
 
 ## 📸 Proje Ekran Görüntüleri
 
